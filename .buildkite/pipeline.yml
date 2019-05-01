@@ -1,0 +1,8 @@
+steps:
+  - command: go build ./... && go test ./...
+    plugins:
+      - golang#v2.0.0:
+          version: "1.12"
+          import: github.com/lstoll/oidc
+          environment:
+            - GO111MODULE=on
